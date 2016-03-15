@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relStoreTitle"
+        android:background="@color/appTheme1"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/imgbtnBack"
+            android:background="@drawable/backbutton"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:id="@+id/imgapplogo"
+            android:background="@drawable/rgislogo"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imgbtnBack"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/store_readiness_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/txtNewInventTitle"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/imgapplogo"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relStoreTitle"
+        android:layout_above="@+id/relInventHotBottom"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtInstruct"
+            android:text="Please choose 1 answer from following:"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup1"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store is Ready"
+                android:id="@+id/rdbFirst"
+                android:checked="false"
+                android:layout_marginTop="10dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Minor Prep required but Stock Take would not be greatly impacted"
+                android:id="@+id/rdbSecond"
+                android:checked="false"
+                android:layout_marginTop="10dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preparation Required but can be ready for Stock Take"
+                android:id="@+id/rdbThird"
+                android:checked="false"
+                android:layout_marginTop="10dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preparation Required but without additional help the store will not be ready for Stock Take"
+                android:id="@+id/rdbFourth"
+                android:checked="false"
+                android:layout_marginTop="10dp"/>
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relComments"
+            android:layout_below="@+id/radioGroup1"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/reltxtComment"
+                android:text="Comments:"
+                android:layout_weight="0.3"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:background="@drawable/textbox_design">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:singleLine="true"
+                    android:padding="5dp"
+                    android:id="@+id/edtComments"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relInventHotBottom"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnStoreNext"
+            android:background="@color/appTheme1"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

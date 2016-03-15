@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relInventHotTitle"
+        android:background="@color/appTheme1"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/imgbtnBack"
+            android:background="@drawable/backbutton"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:id="@+id/imgapplogo"
+            android:background="@drawable/rgislogo"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imgbtnBack"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/txtMainTitle"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/imgapplogo"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollview1"
+        android:fillViewport="true"
+        android:layout_below="@+id/relInventHotTitle"
+        android:layout_above="@+id/relInventHotBottom"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/paraTxt1"
+                    android:text="@string/invent_hot_detail1"
+                    android:textSize="17sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/paraTxt2"
+                    android:layout_below="@+id/paraTxt1"
+                    android:text="@string/invent_hot_detail2"
+                    android:layout_marginTop="15dp"
+                    android:textSize="17sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/paraTxt3"
+                    android:layout_below="@+id/paraTxt2"
+                    android:text="@string/invent_hot_detail3"
+                    android:layout_marginTop="15dp"
+                    android:textSize="17sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/paraTxt4"
+                    android:layout_below="@+id/paraTxt3"
+                    android:text="@string/invent_hot_detail4"
+                    android:layout_marginTop="15dp"
+                    android:textSize="17sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/paraTxt5"
+                    android:layout_below="@+id/paraTxt4"
+                    android:text="@string/invent_hot_detail5"
+                    android:layout_marginTop="15dp"
+                    android:textSize="17sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relInventHotBottom"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnInventHotNext"
+            android:background="@color/appTheme1"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

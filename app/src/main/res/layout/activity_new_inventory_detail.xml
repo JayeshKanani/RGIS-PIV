@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relInventoryTitle"
+        android:background="@color/appTheme1"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/imgbtnBack"
+            android:background="@drawable/backbutton"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:id="@+id/imgapplogo"
+            android:background="@drawable/rgislogo"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imgbtnBack"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/new_inventory_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/txtNewInventTitle"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/imgapplogo"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollview1"
+        android:fillViewport="true"
+        android:layout_below="@+id/relInventoryTitle"
+        android:layout_above="@+id/btnNewInventNext"
+        android:layout_margin="10dp"
+        android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/newInventDetail"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:id="@+id/lnrStoreName">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:text="@string/store_name"
+                    android:textSize="17sp"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/textbox_design"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:background="@android:color/transparent"
+                        android:padding="5dp"
+                        android:id="@+id/edtStoreName"
+                        />
+                    </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:id="@+id/lnrStoreNumber"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/lnrStoreName">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:text="@string/store_number"
+                    android:textSize="17sp"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/textbox_design"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:background="@android:color/transparent"
+                        android:padding="5dp"
+                        android:id="@+id/edtStoreNumber"
+                        />
+                    </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:id="@+id/lnrInventoryDate"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/lnrStoreNumber">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:text="@string/inventory_date"
+                    android:textSize="17sp"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/textbox_design"
+                    >
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/edtInventoryDate"
+                        android:layout_toLeftOf="@+id/imgbtnCalendar"
+                        android:padding="5dp"
+                        android:inputType="date"
+                        />
+
+                    <ImageButton
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:id="@+id/imgbtnCalendar"
+                        android:background="@drawable/calendar"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_centerVertical="true"
+                        />
+
+                </RelativeLayout>
+
+
+                <!--<RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center">
+
+                </RelativeLayout>-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:orientation="horizontal"
+                    android:id="@+id/lnrSalesFloor"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/lnrInventoryDate">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:text="@string/sales_floor_count_length"
+                        android:textSize="17sp"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/textbox_design"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:background="@android:color/transparent"
+                        android:padding="5dp"
+                        android:id="@+id/edtSalesFLoor"
+                        />
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:orientation="horizontal"
+                    android:id="@+id/lnrArrivalTImeBR"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/lnrSalesFloor">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:text="@string/rgis_arrival_time_br"
+                        android:textSize="17sp"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/textbox_design"
+                    >
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/edtArrivalTImeBR"
+                        android:layout_toLeftOf="@+id/imgbtnTimeBR"
+                        android:padding="5dp"
+                        android:inputType="time"
+                        />
+
+                    <ImageButton
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:id="@+id/imgbtnTimeBR"
+                        android:background="@drawable/time"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_centerVertical="true"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:orientation="horizontal"
+                    android:id="@+id/lnrArrivalTImeSF"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/lnrArrivalTImeBR"
+                    android:layout_gravity="center_vertical">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:text="@string/rgis_arrival_time_sf"
+                        android:textSize="17sp"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/textbox_design"
+                    >
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/edtArrivalTImeSF"
+                        android:layout_toLeftOf="@+id/imgbtnTimeSF"
+                        android:padding="5dp"
+                        android:inputType="time"
+                        />
+
+                    <ImageButton
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:id="@+id/imgbtnTimeSF"
+                        android:background="@drawable/time"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_centerVertical="true"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:orientation="horizontal"
+                    android:id="@+id/lnrCountManager"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/lnrArrivalTImeSF">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:text="@string/nl_count_manager"
+                        android:textSize="17sp"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/textbox_design"
+                    >
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:background="@android:color/transparent"
+                        android:padding="5dp"
+                        android:id="@+id/edtCountManager"
+                        />
+
+                    </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:orientation="horizontal"
+                    android:id="@+id/lnrCountManagerContactNo"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/lnrCountManager">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:text="@string/nl_count_manager_contact_no"
+                        android:textSize="17sp"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/textbox_design"
+                    >
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:background="@android:color/transparent"
+                        android:padding="5dp"
+                        android:id="@+id/edtCountManagerContactNo"
+                        android:inputType="phone"
+                        />
+
+                    </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:orientation="horizontal"
+                    android:id="@+id/lnrRGISSupervisor"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/lnrCountManagerContactNo">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:text="@string/rgis_supervisor"
+                        android:textSize="17sp"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/textbox_design"
+                    >
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:background="@android:color/transparent"
+                        android:padding="5dp"
+                        android:id="@+id/edtRGISSupervisor"
+                        />
+
+                    </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:orientation="horizontal"
+                    android:id="@+id/lnrRGISSupervisorContactNo"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/lnrRGISSupervisor">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:text="@string/rgis_supervisor_contact_no"
+                        android:textSize="17sp"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/textbox_design"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:background="@android:color/transparent"
+                        android:padding="5dp"
+                        android:id="@+id/edtRGISSupervisorContactNo"
+                        android:inputType="phone"
+                        />
+
+                    </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnNewInventNext"
+        android:background="@color/appTheme1"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

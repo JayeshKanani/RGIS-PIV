@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relCommentsTitle"
+        android:background="@color/appTheme1"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/imgbtnBack"
+            android:background="@drawable/backbutton"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:id="@+id/imgapplogo"
+            android:background="@drawable/rgislogo"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imgbtnBack"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/comment_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/txtMainTitle"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/imgapplogo"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollview1"
+        android:fillViewport="true"
+        android:layout_below="@+id/relCommentsTitle"
+        android:layout_above="@+id/relCommentBottom"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:id="@+id/lnrComments"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtComment"
+            android:text="@string/any_comments"
+            android:layout_weight=".30"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:background="@drawable/textbox_design"
+            android:singleLine="true"
+            android:padding="5dp"
+            android:id="@+id/edtComments"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relCapture"
+        android:layout_below="@+id/lnrComments"
+        android:layout_marginTop="20dp"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnTakePhotos"
+            android:background="@color/appTheme1"
+            android:text="@string/take_photos"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            />
+
+        <ImageView
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:id="@+id/imgCapture"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/btnTakePhotos"
+            />
+
+    </RelativeLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relCommentBottom"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSubmit"
+            android:background="@color/appTheme1"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
