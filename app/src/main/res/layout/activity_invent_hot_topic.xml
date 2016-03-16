@@ -64,8 +64,8 @@
                     android:id="@+id/paraTxt1"
                     android:text="@string/invent_hot_detail1"
                     android:textSize="17sp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"/>
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -75,8 +75,8 @@
                     android:text="@string/invent_hot_detail2"
                     android:layout_marginTop="15dp"
                     android:textSize="17sp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"/>
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -86,8 +86,8 @@
                     android:text="@string/invent_hot_detail3"
                     android:layout_marginTop="15dp"
                     android:textSize="17sp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"/>
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -97,8 +97,8 @@
                     android:text="@string/invent_hot_detail4"
                     android:layout_marginTop="15dp"
                     android:textSize="17sp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"/>
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -108,8 +108,8 @@
                     android:text="@string/invent_hot_detail5"
                     android:layout_marginTop="15dp"
                     android:textSize="17sp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"/>
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"/>
 
             </RelativeLayout>
         </LinearLayout>
